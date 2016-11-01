@@ -12,7 +12,6 @@ from caffenet import CaffeNet
 from nin import NiN
 from resnet import ResNet50, ResNet101, ResNet152
 
-
 class DataSpec(object):
     '''Input data specifications for an ImageNet model.'''
 

@@ -212,7 +212,8 @@ class Network(object):
                 input = tf.squeeze(input, squeeze_dims=[1, 2])
             else:
                 raise ValueError('Rank 2 tensor input expected for softmax!')
-        return tf.nn.softmax(input, name)
+        return tf.nn.softmax(logits=input, name=name)
+        # return tf.nn.softmax(input, name)
 
     @layer
     def batch_normalization(self, input, name, scale_offset=True, relu=False):
