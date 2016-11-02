@@ -11,6 +11,7 @@ from alexnet import AlexNet
 from caffenet import CaffeNet
 from nin import NiN
 from resnet import ResNet50, ResNet101, ResNet152
+from squeezenet import SqueezeNet_v1_1
 
 class DataSpec(object):
     '''Input data specifications for an ImageNet model.'''
@@ -52,7 +53,7 @@ def std_spec(batch_size, isotropic=True):
     return DataSpec(batch_size=batch_size, scale_size=256, crop_size=224, isotropic=isotropic)
 
 # Collection of sample auto-generated models
-MODELS = (AlexNet, CaffeNet, GoogleNet, NiN, ResNet50, ResNet101, ResNet152, VGG16)
+MODELS = (AlexNet, CaffeNet, GoogleNet, NiN, ResNet50, ResNet101, ResNet152, VGG16, SqueezeNet_v1_1)
 
 # The corresponding data specifications for the sample models
 # These specifications are based on how the models were trained.
@@ -65,7 +66,8 @@ MODEL_DATA_SPECS = {
     ResNet101: std_spec(batch_size=25),
     ResNet152: std_spec(batch_size=25),
     NiN: std_spec(batch_size=500),
-    VGG16: std_spec(batch_size=25)
+    VGG16: std_spec(batch_size=25),
+    SqueezeNet_v1_1: std_spec(batch_size=500)
 }
 
 

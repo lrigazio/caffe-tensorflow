@@ -115,6 +115,7 @@ class LayerAdapter(object):
 
     @staticmethod
     def get_kernel_value(scalar, repeated, idx, default=None):
+        print scalar, repeated, idx
         if scalar:
             return scalar
         if repeated:
@@ -134,6 +135,7 @@ class LayerAdapter(object):
     def kernel_parameters(self):
         assert self.kind in (NodeKind.Convolution, NodeKind.Pooling)
         params = self.parameters
+        print params
         k_h = self.get_kernel_value(params.kernel_h, params.kernel_size, 0)
         k_w = self.get_kernel_value(params.kernel_w, params.kernel_size, 1)
         s_h = self.get_kernel_value(params.stride_h, params.stride, 0, default=1)
