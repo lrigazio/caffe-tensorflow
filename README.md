@@ -32,6 +32,7 @@ The following converted models have been verified on the ILSVRC2012 validation s
 | [Network in Network](http://arxiv.org/abs/1312.4400)  |         81.21% |
 | [CaffeNet](http://arxiv.org/abs/1408.5093)            |         79.93% |
 | [AlexNet](http://goo.gl/3BilWd)                       |         79.84% |
+| [SqueezeNet v1.1](https://goo.gl/Zik7yb)              |         78.67% |
 
 ## Notes
 
